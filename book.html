@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProperAuto Home Page</title>
+    <!--Bootstrap CSS cdn-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--External stylesheet-->
+    <link rel="stylesheet" href="static/css/style.css">
+    <!--jQuery cdn-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!--Bootstrap JavaScript cdn-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <!--Font Awesome CDN-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
+        integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!--Bootstrap Navbar in header-->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light stickyNav">
+            <!--Navbar logo-->
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <!--Home heading-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only"></span></a>
+                    </li>
+                    <!--Services dropdown section-->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="services.html" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Services
+                        </a>
+                        <!--Dropdown options: Each link jumps to that particular section of the page-->
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="services.html#valet_service">Car Valet Service</a>
+                            <a class="dropdown-item" href="services.html#clutch_replacement">Clutch Replacement</a>
+                            <a class="dropdown-item" href="services.html#full_service">Full Service</a>
+                            <a class="dropdown-item" href="services.html#pre_nct_check">Pre NCT Check</a>
+                            <a class="dropdown-item" href="services.html#tyre_fitting">Tyre Fitting</a>
+                            <a class="dropdown-item" href="services.html#wheel_alignment">Wheel Allignment</a>
+                        </div>
+                    </li>
+                    <!--Tyre Quote heading-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Tyre Quote</a>
+                    </li>
+                    <!--FAQ heading-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">FAQ</a>
+                    </li>
+                    <!--Contact Us heading-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                    </li>
+                </ul>
+                <!--Book an Appointment set to show on right of navbar-->
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="book.html">Book an Appointment</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!--Banner image above main area-->
+        <img src="static/img/speedometer.jpg" alt="speedometer" class="bannerImg">
+        <h1 class="headerHeading">Book Appointment</h1>
+    </header>
+    <main>
+        <p class="textCenter">Please fill out the form below to book an appointment. The more detail put nto your for,
+            the quicker we'll be able to assess and diagnose
+            the issue you have</p>
+        <p class="textCenter">Once your form is submitted to our team we will get back to you ASAP to confirm wheither
+            we can accomadate your
+            booking time/date preferences. If we are fully booked up for that time, we will provide an alternate date
+            and time you can avail of.
+        </p>
+        <div class="formWrap">
+            <form class="col-sm-12 bookingForm">
+                <!--Body of form(Input Areas)-->
+
+                <table class="bookingFormTable">
+                    <tbody>
+                        <!--Name section-->
+                        <tr>
+                            <td>Your Name:</td>
+                        </tr>
+                        <tr>
+                            <td><input type="text" placeholder="What is your name?" id="name" name="name" required></td>
+                        </tr>
+                        <!--Phone section-->
+                        <tr>
+                            <td>Phone Number:</td>
+                        </tr>
+                        <tr>
+                            <td><input type="tel" placeholder="What is your phone number?" id="phone" name="phone"></td>
+                        </tr>
+                        <!--Email section-->
+                        <tr>
+                            <td>Email Address::</td>
+                        </tr>
+                        <tr>
+                            <td><input type="email" placeholder="What is your email address?" id="email" name="email">
+                            </td>
+                        </tr>
+                        <!--Services Required section-->
+                        <tr>
+                            <td>Service(s) Required?</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <!--Need to look at better ways of selecting multiple-->
+                                <select name="servicesRequired" id="servicesRequired" multiple>
+                                    <option disabled selected>What service(s) do you want to book?</option>
+                                    <option value="carValet">Car Valet (&euro;20)</option>
+                                    <option value="clutchReplacement">Clutch Replacement (&euro;300)</option>
+                                    <option value="fullService">Full Service (&euro;100)</option>
+                                    <option value="preNctCheck">Pre-NCT Check (Free)</option>
+                                    <option value="tyreFitting">Tyre Fitting (&euro;10)</option>
+                                    <option value="wheelAlignment">Wheel Alignment(&euro;20)</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <!--Preferred Date section-->
+                        <tr>
+                            <td>Preferred Date?</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="date" name="date" id="date">
+                            </td>
+                            <td>
+                                <p id="dateError"></p>
+                            </td>
+                        </tr>
+                        <!--Preferred Time section(NEED TO MAKE SURE A PAST TIME ISN'T SELECTED-->
+                        <tr>
+                            <td>Preferred Time?[HH:MM]</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="time" name="time" id="time">
+                            </td>
+                            <td>
+                                <p id="timeError"></p>
+                            </td>
+                        </tr>
+                        <!--Require car pick up/collection section-->
+                        <tr>
+                            <td>Do you require your car to be collected/dropped off?
+                                <span><input type="checkbox" id="carCollection" name="carCollection"></span>
+                            </td>
+                        </tr>
+                        <!--Collection/Drop off areas hidden unless checkbox is clicked-->
+                        <tr class="hiddenCollectionArea">
+                            <td>Collection Point:</td>
+                        </tr>
+                        <tr class="hiddenCollectionArea">
+                            <td>
+                                <input type="text" required placeholder="Collection Point">
+                            </td>
+                        </tr>
+                        <tr class="hiddenCollectionArea">
+                            <td>Drop Off Point:</td>
+                        </tr>
+                        <tr class="hiddenCollectionArea">
+                            <td>
+                                <input type="text" required placeholder="Dropoff Point">
+                            </td>
+                        </tr>
+                        <!--Car Registration section-->
+                        <tr>
+                            <td>Do you know your car registration?</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="regKnown">Yes</label>
+                                <input type="radio" id="regKnown" name="carReg" value="Yes">
+                                <label for="regUnknown">No</label>
+                                <input type="radio" id="regUnknown" name="carReg" value="No">
+                            </td>
+                        </tr>
+                        <!--If reg is known show this div-->
+                        <tr class="hiddenRegKnownArea">
+                            <td>Your Registration?</td>
+                        </tr>
+                        <tr class="hiddenRegKnownArea">
+                            <td><input type="text" name="carReg" id="carReg"></td>
+                        </tr>
+                        <!--If reg is unknown show this div-->
+                        <tr class="hiddenRegUnKnownArea">
+                            <td>Your car make?</td>
+                        </tr>
+                        <tr class="hiddenRegUnKnownArea">
+                            <td><input type="text" name="carMake" id="carMake"></td>
+                        </tr>
+                        <tr class="hiddenRegUnKnownArea">
+                            <td>Your car model?</td>
+                        </tr>
+                        <tr class="hiddenRegUnKnownArea">
+                            <td><input type="text" name="carModel" id="carModel"></td>
+                        </tr>
+                        <tr>
+                            <td>Any more details?</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <textarea name="moreDetails" cols="30" rows="10"></textarea>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>
+                                <p id="showBookingDetails"></p>
+                            </td>
+                            <!--Form button row for checkDetails Section-->
+                        <tr>
+                            <td>
+                                <button id="checkDetailsBtn">Check your Details</button>
+                            </td>
+                        </tr>
+                        <!--Cost before discount row-->
+                    </tfoot>
+                </table>
+            </form>
+        </div>
+    </main>
+    <script src="static/js/app.js"></script>
+</body>
+
+</html>
