@@ -161,6 +161,8 @@ iframe{
 }
 
 
+
+
 .serviceBox{
     padding: 0.1em;
 }
@@ -193,6 +195,12 @@ iframe{
 }
 
 /*BOOK AN APPOINTMENT*/
+.bookingParagraph{
+    font-size: 2em;
+    text-align: center;
+    margin: 1em;
+    padding: 1em;
+}
 .bookingForm{
     width: 100%;
     display: inline-block;
