@@ -77,15 +77,12 @@
         </nav>
         <!--Banner image above main area-->
         <img src="static/img/speedometer.jpg" alt="speedometer" class="bannerImg">
-        <h1 class="headerHeading">Book Appointment</h1>
     </header>
     <main>
         <p class="textCenter">Please fill out the form below to book an appointment. The more detail put nto your for,
             the quicker we'll be able to assess and diagnose
-            the issue you have</p>
-        <p class="textCenter">Once your form is submitted to our team we will get back to you ASAP to confirm wheither
-            we can accomadate your
-            booking time/date preferences. If we are fully booked up for that time, we will provide an alternate date
+            the issue you have. Once your form is submitted to our team we will get back to you ASAP to confirm wheither
+            we can accomadate your booking time/date preferences. If we are fully booked up for that time, we will provide an alternate date
             and time you can avail of.
         </p>
         <div class="formWrap">
@@ -96,29 +93,37 @@
                     <tbody>
                         <!--Name section-->
                         <tr>
-                            <td>Your Name:</td>
+                            <td><span class="requiredInput">*</span>Your Name:</td>
                         </tr>
                         <tr>
-                            <td><input type="text" placeholder="What is your name?" id="name" name="name" required></td>
+                            <td><input type="text" placeholder="What is your name?" id="bookingName" name="bookingName" required></td>
+                        </tr>
+                        <tr>
+                            <td><p class="bookingFormError" id="bookingNameOutput"></p></td>
                         </tr>
                         <!--Phone section-->
                         <tr>
                             <td>Phone Number:</td>
                         </tr>
                         <tr>
-                            <td><input type="tel" placeholder="What is your phone number?" id="phone" name="phone"></td>
+                            <td><input type="tel" placeholder="What is your phone number?" id="bookingPhone" name="bookingPhone"></td>
                         </tr>
                         <!--Email section-->
                         <tr>
-                            <td>Email Address::</td>
+                            <td>Email Address:</td>
                         </tr>
                         <tr>
-                            <td><input type="email" placeholder="What is your email address?" id="email" name="email">
+                            <td><input type="email" placeholder="What is your email address?" id="bookingEmail" name="bookingEmail">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p class="bookingFormError" id="bookingContactOutput"></p>
                             </td>
                         </tr>
                         <!--Services Required section-->
                         <tr>
-                            <td>Service(s) Required?</td>
+                            <td><span class="requiredInput">*</span>Service(s) Required?</td>
                         </tr>
                         <tr>
                             <td>
@@ -134,26 +139,33 @@
                                 </select>
                             </td>
                         </tr>
+                        <tr>
+                            <td><p class="bookingFormError" id="bookingServiceOutput"></p></td>
+                        </tr>
                         <!--Preferred Date section-->
                         <tr>
-                            <td>Preferred Date?</td>
+                            <td><span class="requiredInput">*</span>Preferred Date?</td>
                         </tr>
                         <tr>
                             <td>
-                                <input type="date" name="date" id="date">
-                            </td>
-                            <td>
-                                <p id="dateError"></p>
+                                <input type="date" name="bookingDate" id="bookingDate" required>
                             </td>
                         </tr>
-                        <!--Preferred Time section(NEED TO MAKE SURE A PAST TIME ISN'T SELECTED-->
+                        <tr>
+                            <td>
+                                <p id="dateError" class="bookingFormError"></p>
+                            </td>
+                        </tr>
+                        <!--Preferred Time section-->
                         <tr>
                             <td>Preferred Time?[HH:MM]</td>
                         </tr>
                         <tr>
                             <td>
-                                <input type="time" name="time" id="time">
+                                <input type="time" name="bookingTime" id="bookingTime">
                             </td>
+                        </tr>
+                        <tr>
                             <td>
                                 <p id="timeError"></p>
                             </td>
@@ -218,8 +230,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <textarea name="moreDetails" cols="30" rows="10"></textarea>
-                            </td>
+                                <textarea name="extraBookingDetails" id="extraBookingDetails"></textarea>
                         </tr>
                     </tbody>
                     <tfoot>
@@ -229,11 +240,15 @@
                             </td>
                             <!--Form button row for checkDetails Section-->
                         <tr>
-                            <td>
+                            <td class="textCenter">
                                 <button id="checkDetailsBtn">Check your Details</button>
                             </td>
                         </tr>
-                        <!--Cost before discount row-->
+                        <tr>
+                            <td id="submitDetailsBtn" class="textCenter">
+                                <input type="submit">
+                            </td>
+                        </tr>
                     </tfoot>
                 </table>
             </form>

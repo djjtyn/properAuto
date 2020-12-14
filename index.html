@@ -27,7 +27,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light stickyNav">
             <!--Navbar logo-->
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand" href="index.html">Navbar</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -75,9 +75,8 @@
                 </ul>
             </div>
         </nav>
-  
-        <!--Testimonial Section-->
-        <div class="jumbotron">
+        <!--Testimonial Section: This section is only shown on medium screen size and upwards. Hidden on mobile-->
+        <div class="jumbotron d-none d-md-block">
             <div id="carouselControls" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -89,8 +88,8 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
-                            <span>-Mrs Maguire</span>
                         </p>
+                        <p>-Mrs Maguire</p>
                     </div>
                     <div class="carousel-item">
                         <p>"The lads at Proper Auto really know what they're doing with cars. Great service"</p>
@@ -100,18 +99,41 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
-                            <span>-Mr Smith</span>
                         </p>
+                        <p>-Mr Smith</p>
                     </div>
                     <div class="carousel-item">
-                        <p>Proper Quality from Proper Auto as usual. They even collected my car!</p>
-                        <p>                            
+                        <p>"Proper Quality from Proper Auto as usual. They even collected my car!"</p>
+                        <p>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
-                            <span>-Tom</span></p>    
+                        </p>
+                        <p>-Tom</p>
+                    </div>
+                    <div class="carousel-item">
+                        <p>"I couldn't have got a better service anywhere else.Highly recommend!"</p>
+                        <p>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </p>
+                        <p>-Ms Rigby</p>
+                    </div>
+                    <div class="carousel-item">
+                        <p>"10/10 everytime. Best prices around!"</p>
+                        <p>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </p>
+                        <p>-Mr Cosby</p>
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">
@@ -124,216 +146,218 @@
                 </a>
             </div>
         </div>
-    </div>
-
-
-
         <!--Pages main heading-->
         <h1 class="headerHeading">About Us</h1>
     </header>
     <main>
         <div class="container-fluid">
-        <div class="aboutUs">
-            <p><b>Proper Auto</b> has been in business since the Summer of 1999. With over 20 years of experience We
-                have serviced countless
-                numbers of cars and left every customer feeling very happy with the services we have provided. We
-                are renowned for our
-                quick turnaround time and attention to detail.</p>
-            <p>We provide a car <b>collection and drop off</b> service in which we can collect your car from any
-                location within 10 kilometres
-                of our location, drive it to our location, service it and then drop it back off at the location we
-                picked it up.</p>
-        </div>
-        <!--Why choose us section-->
-        <h2 class="textCenter">Why Choose Us?</h2>
-        <div class="row">
-            <!--Question mark image-->
-            <div class="col-sm-12 col-md-6 order-md-2">
-                <img src="static/img/questionMark.jpg" alt="questionMark" class="questionImg">
+            <!--About us section-->
+            <div class="aboutUs">
+                <p><b>Proper Auto</b> has been in business since the Summer of 1999. With over 20 years of experience we
+                    have serviced a wide range of cars and left every customer feeling very happy with the services we
+                    have provided. We
+                    are renowned for our quick turnaround time and attention to detail.</p>
+                <p>We provide a <b>car collection and drop off</b> service. This allows our customers to have their car
+                    collected and dropped back
+                    at a location of their choice once we finish the service. This service is only applicable for
+                    locations within 10 kilometres of
+                    our centre.</p>
             </div>
-            <div class="col-sm-12 col-md-6 order-md-1 accordionBox">
-                <!--Bootstrap Accordion for why choose us-->
-                <div class="accordion" id="homeTopAccordion">
-                    <!--Accordion Section One-->
-                    <div class="card">
-                        <div class="card-header" id="headingTopOne">
-                            <h2 class="mb-0">
-                                <button class="btn btn-link" type="button" data-toggle="collapse"
-                                    data-target="#collapseOneTop" aria-expanded="true" aria-controls="collapseOneTop">
-                                    Qualified Staff
-                                </button>
-                            </h2>
-                        </div>
-                        <div id="collapseOneTop" class="collapse show" aria-labelledby="headingTopOne"
-                            data-parent="#homeTopAccordion">
-                            <div class="card-body">
-                                <p>Every member on our team has extensive experience in every aspect of servicing
-                                    cars</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Accordion Section Two-->
-                    <div class="card">
-                        <div class="card-header" id="headingTopTwo">
-                            <h2 class="mb-0">
-                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                                    data-target="#collapseTopTwo" aria-expanded="false" aria-controls="collapseTopTwo">
-                                    Price Promise
-                                </button>
-                            </h2>
-                        </div>
-                        <div id="collapseTopTwo" class="collapse" aria-labelledby="headingTopTwo"
-                            data-parent="#homeTopAccordion">
-                            <div class="card-body">
-                                <p>We are almost certain that you wont be quoted cheaper elesewhere. If you have
-                                    found a cheaper quote
-                                    we can match that price provided you show some official documentation of the
-                                    quote given elsewhere.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Accordion Section Three-->
-                    <div class="card">
-                        <div class="card-header" id="headingTopThree">
-                            <h2 class="mb-0">
-                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                                    data-target="#collapseTopThree" aria-expanded="false"
-                                    aria-controls="collapseTopThree">
-                                    Collection/Drop off Service
-                                </button>
-                            </h2>
-                        </div>
-                        <div id="collapseTopThree" class="collapse" aria-labelledby="headingTopThree"
-                            data-parent="#homeTopAccordion">
-                            <div class="card-body">
-                                If you dont have the time to get to our location we will take the time to pick up
-                                your car from any address
-                                within 10 kilometres of our centre and drop it back off at any location within 10
-                                kilometres.
-                            </div>
-                        </div>
-                    </div>
-                    <!--Accordion Section Four-->
-                    <div class="card">
-                        <div class="card-header" id="headingTopFour">
-                            <h2 class="mb-0">
-                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                                    data-target="#collapseTopFour" aria-expanded="false"
-                                    aria-controls="collapseTopFour">
-                                    Service Warranty
-                                </button>
-                            </h2>
-                        </div>
-                        <div id="collapseTopFour" class="collapse" aria-labelledby="headingTopFour"
-                            data-parent="#homeTopAccordion">
-                            <div class="card-body">
-                                We give a 6 month warranty on all services.
-                            </div>
-                        </div>
-                    </div>
-                    <!--Accordion Section Five-->
-                    <div class="card">
-                        <div class="card-header" id="headingTopFive">
-                            <h2 class="mb-0">
-                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
-                                    data-target="#collapseTopFive" aria-expanded="false"
-                                    aria-controls="collapseTopFive">
-                                    Our Opening Hours
-                                </button>
-                            </h2>
-                        </div>
-                        <div id="collapseTopFive" class="collapse" aria-labelledby="headingTopFive"
-                            data-parent="#homeTopAccordion">
-                            <div class="card-body">
-                                <p>We know that peoples schedule can be very hectic which is why our opening hours
-                                    are 09:00 - 21:00 Monday
-                                    to Friday.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+            <!--Why choose us section-->
+            <h2 class="textCenter">Why Choose Us?</h2>
+            <div class="row">
+                <!--Question mark image-->
+                <div class="col-sm-12 col-md-6 order-md-2">
+                    <img src="static/img/questionMark.jpg" alt="questionMark" class="questionImg">
                 </div>
-            </div>
-        </div>
-        <!--Drop In/Give a call section-->
-        <div id="homeBottomAccordion">
-            <!--Address Card-->
-            <div class="card">
-                <div class="card-header" id="headingBottomOne">
-                    <h3 class="mb-0">
-                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseBottomOne"
-                            aria-expanded="true" aria-controls="collapseBottomOne">
-                            Drop In!
-                        </button>
-                    </h3>
-                </div>
-                <div id="collapseBottomOne" class="collapse" aria-labelledby="headingBottomOne"
-                    data-parent="#homeBottomAccordion">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-sm-12 col-md-6">
-                                <!--Google map area-->
-                                <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2374.938601804354!2d-6.2180983841569395!3d53.46955738000503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486710c1ab0ed491%3A0xecad4dbae8ecf7b8!2sSwords%20Business%20Campus%2C%20Balheary%20Rd%2C%20Balheary%20Demesne%2C%20Swords%2C%20Co.%20Dublin!5e0!3m2!1sen!2sie!4v1607610646529!5m2!1sen!2sie"
-                                    aria-hidden="false" class="accordionImage"></iframe>
+                <div class="col-sm-12 col-md-6 order-md-1 whyAccordionBox">
+                    <!--Bootstrap Accordion for why choose us section-->
+                    <div class="accordion" id="homeTopAccordion">
+                        <!--Accordion Section One-->
+                        <div class="card">
+                            <div class="card-header" id="headingTopOne">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link" type="button" data-toggle="collapse"
+                                        data-target="#collapseOneTop" aria-expanded="true"
+                                        aria-controls="collapseOneTop">
+                                        Qualified Staff
+                                    </button>
+                                </h2>
                             </div>
-                            <div class="col-sm-12 col-md-6">
-                                <h3>Unit One</h3>
-                                <h3>Swords Business Campus</h3>
-                                <h3>Swords</h3>
-                                <h3>Co. Dublin</h3>
-                                <h3>Ireland</h3>
+                            <div id="collapseOneTop" class="collapse show" aria-labelledby="headingTopOne"
+                                data-parent="#homeTopAccordion">
+                                <div class="card-body">
+                                    <p>Every member on our team has extensive experience in every aspect of servicing
+                                        cars. We only the hire the best of the best.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Accordion Section Two-->
+                        <div class="card">
+                            <div class="card-header" id="headingTopTwo">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                        data-target="#collapseTopTwo" aria-expanded="false"
+                                        aria-controls="collapseTopTwo">
+                                        Our Price Promise
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseTopTwo" class="collapse" aria-labelledby="headingTopTwo"
+                                data-parent="#homeTopAccordion">
+                                <div class="card-body">
+                                    <p>We are almost certain that you wont be quoted cheaper elsewhere. If you have
+                                        found a cheaper quote we will match that price provided you show some official
+                                        documentation of the
+                                        quote given elsewhere.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Accordion Section Three-->
+                        <div class="card">
+                            <div class="card-header" id="headingTopThree">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                        data-target="#collapseTopThree" aria-expanded="false"
+                                        aria-controls="collapseTopThree">
+                                        Collection/Drop off Service
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseTopThree" class="collapse" aria-labelledby="headingTopThree"
+                                data-parent="#homeTopAccordion">
+                                <div class="card-body">
+                                    If you dont have the time to get to our location we will take the time to pick up
+                                    your car from any address within 10 kilometres of our centre and drop it back off at
+                                    any location within
+                                    10 kilometres so you wont even have to travel anywhere yourself to get the car
+                                    serviced!
+                                </div>
+                            </div>
+                        </div>
+                        <!--Accordion Section Four-->
+                        <div class="card">
+                            <div class="card-header" id="headingTopFour">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                        data-target="#collapseTopFour" aria-expanded="false"
+                                        aria-controls="collapseTopFour">
+                                        Service Warranty
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseTopFour" class="collapse" aria-labelledby="headingTopFour"
+                                data-parent="#homeTopAccordion">
+                                <div class="card-body">
+                                    We give a 6 month warranty on all services carried out.
+                                </div>
+                            </div>
+                        </div>
+                        <!--Accordion Section Five-->
+                        <div class="card">
+                            <div class="card-header" id="headingTopFive">
+                                <h2 class="mb-0">
+                                    <button class="btn btn-link collapsed" type="button" data-toggle="collapse"
+                                        data-target="#collapseTopFive" aria-expanded="false"
+                                        aria-controls="collapseTopFive">
+                                        Our Opening Hours
+                                    </button>
+                                </h2>
+                            </div>
+                            <div id="collapseTopFive" class="collapse" aria-labelledby="headingTopFive"
+                                data-parent="#homeTopAccordion">
+                                <div class="card-body">
+                                    <p>We know that peoples schedule can be very hectic which is why our opening hours
+                                        are 09:00 - 21:00 Monday to Friday.
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!--Telephone Card-->
-            <div class="card">
-                <div class="card-header" id="headingBottomTwo">
-                    <h5 class="mb-0">
-                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseBottomTwo"
-                            aria-expanded="false" aria-controls="collapseBottomTwo">
-                            Give us a call!
-                        </button>
-                    </h5>
-                </div>
-                <div id="collapseBottomTwo" class="collapse" aria-labelledby="headingBottomTwo"
-                    data-parent="#homeBottomAccordion">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-sm-12 col-md-6">
-                                <h3>01 840123455</h3>
-                                <h3>OR</h3>
-                                <h3>086 12345678</h3>
-                            </div>
-                            <div class="col-sm-12 col-md-6">
-                                <img src="static/img/telephone.jpg" class="accordionImage" alt="telephone">
+            <!--Drop In/Give a call section-->
+            <h2 class="textCenter">Get in Touch!</h2>
+            <div id="homeBottomAccordion">
+                <!--Address Card-->
+                <div class="card">
+                    <div class="card-header" id="headingBottomOne">
+                        <h3 class="mb-0">
+                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseBottomOne"
+                                aria-expanded="true" aria-controls="collapseBottomOne">
+                                Drop In!
+                            </button>
+                        </h3>
+                    </div>
+                    <div id="collapseBottomOne" class="collapse" aria-labelledby="headingBottomOne"
+                        data-parent="#homeBottomAccordion">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6">
+                                    <!--Google map area-->
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2374.938601804354!2d-6.2180983841569395!3d53.46955738000503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x486710c1ab0ed491%3A0xecad4dbae8ecf7b8!2sSwords%20Business%20Campus%2C%20Balheary%20Rd%2C%20Balheary%20Demesne%2C%20Swords%2C%20Co.%20Dublin!5e0!3m2!1sen!2sie!4v1607610646529!5m2!1sen!2sie"
+                                        aria-hidden="false" class="accordionImage"></iframe>
+                                </div>
+                                <div class="col-sm-12 col-md-6 bottomAccordionText">
+                                    <p>Unit One</p>
+                                    <p>Swords Business Campus</p>
+                                    <p>Swords</p>
+                                    <p>Co. Dublin</p>
+                                    <p>Ireland</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!--Email Card-->
-            <div class="card">
-                <div class="card-header" id="headingBottomThree">
-                    <h5 class="mb-0">
-                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseBottomThree"
-                            aria-expanded="false" aria-controls="collapseBottomThree">
-                            Email Us!
-                        </button>
-                    </h5>
+                <!--Telephone Card-->
+                <div class="card">
+                    <div class="card-header" id="headingBottomTwo">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse"
+                                data-target="#collapseBottomTwo" aria-expanded="false"
+                                aria-controls="collapseBottomTwo">
+                                Give us a call!
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseBottomTwo" class="collapse" aria-labelledby="headingBottomTwo"
+                        data-parent="#homeBottomAccordion">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6 bottomAccordionText">
+                                    <p>01 840123455</p>
+                                    <p>OR</p>
+                                    <p>086 12345678</p>
+                                </div>
+                                <div class="col-sm-12 col-md-6">
+                                    <img src="static/img/telephone.jpg" class="accordionImage" alt="telephone">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div id="collapseBottomThree" class="collapse" aria-labelledby="headingBottomThree"
-                    data-parent="#homeBottomAccordion">
-                    <div class="card-body">
-                        <h3>You can email us by clicking the button below</h3>
-                        <button>Email</button>
+                <!--Email Card-->
+                <div class="card">
+                    <div class="card-header" id="headingBottomThree">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse"
+                                data-target="#collapseBottomThree" aria-expanded="false"
+                                aria-controls="collapseBottomThree">
+                                Email Us!
+                            </button>
+                        </h5>
+                    </div>
+                    <div id="collapseBottomThree" class="collapse" aria-labelledby="headingBottomThree"
+                        data-parent="#homeBottomAccordion">
+                        <div class="card-body">
+                            <h3>You can email us by clicking the button below</h3>
+                            <button>Email</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
         </div>
 

@@ -1,31 +1,39 @@
 //Initialise and declare global variables
-var discountApplied = false;
 var totalCost = 0;
-
-
 
 //jQUERY
 $(document).ready(function () {
-    //initialise and declare variables
     $("#checkDetailsBtn").click(function () {
-        var userName = $("#name").val();
-        var phoneNumber = $("#phone").val();
-        var email = $("#email").val();
+        //call javaScript functions
+        validateBookingName();
+        emailPhone();
+        validateServices();
+        validateDate();
+        //initialise and declare variables
+        var userName = $("#bookingName").val();
+        var phoneNumber = $("#bookingPhone").val();
+        var email = $("#bookingEmail").val();
         var servicesSelected = $("#servicesRequired").val();
-        console.log(servicesSelected);
-        var dateSelected = $("#date").val().toLocaleString();
+        var dateSelected = $("#bookingDate").val().toLocaleString();
         var selectedDate = new Date(dateSelected).toLocaleDateString();
-        if (selectedDate == "Invalid Date" || servicesSelected.length ==0){
+        if (selectedDate == "Invalid Date" || servicesSelected.length == 0 || userName == "" || (!phoneNumber && !email)){
+            $("#showBookingDetails").addClass("bookingFormError");
             $("#showBookingDetails").html("Hello " + userName + ". You have not fully completed the booking form.");
         }else{
-    $("#showBookingDetails").html("Hello " + userName + ". You want to book for " + selectedDate + "<br>We can contact you at " + phoneNumber
+    $("#showBookingDetails").html("Hello" + userName + ". You want to book for " + selectedDate + "<br>We can contact you at " + phoneNumber
      + " and " + email + ". Your selected service is: <br>" + servicesSelected + "<br>Which brings your cost to &euro;" + totalCost);
-    totalCost = 0;
+     $("#submitDetailsBtn").show();
         }
     })
     //service choice to listen for change in selection on book appointment form and add the service cost to the total cost variable
     $("#servicesRequired").change(function () {
+        totalCost = 0;
         var servicesSelected = $("#servicesRequired").val();
+        //if no services are selected display an error message
+        if(servicesSelected === ""){
+            console.log("Test");
+            $("#bookingServiceOutput").html("You must select at least one service");
+        }
         //if car valet is selected add 20 to the total cost
         if (servicesSelected.includes("carValet")){
             totalCost += 20;
@@ -47,24 +55,13 @@ $(document).ready(function () {
             totalCost += 20;
         }
     })
-    //if the date selected is in the past an error message will be shown
-    $("#date").change(function () {
-        var dateSelected = $("#date").val();
-        if(dateSelected.val() == ""){
-            console.log("test");
-        }
+
  
-        //get selected date and store in dateSelected variable
-        var selectedDate = new Date(dateSelected);
-        //get current date and store in now variable
-        var now = new Date();
+
+
+        
         //if selected date is before current date display error
-        if(selectedDate < now){
-            $("#dateError").html("You cannot select a date in the Past");
-        }else{
-            $("#dateError").html("");
-        }
-    })
+       
     //if car collection/dropoff box is checked
     $("#carCollection").change(function () {
         if($("#carCollection").is(":checked")){
@@ -86,15 +83,65 @@ $(document).ready(function () {
     })
 })
 
-// //This function will display the users booking preferences after using the book appointment form. It also allows the submit button to be diplayed
-// function checkBookingDetails(){
-//     //get input values
 
+//This function allows an error message to be shown if the bookingName is empty
+function validateBookingName() {
+    //assign username variable to empty string which user populates
+    var userName = "";
+    userName = document.getElementById("bookingName").value;
+    //get output p for javascript message
+    var output = document.getElementById("bookingNameOutput");
+    //if username is not valid display message in red else display alternative message in default color
+    if (!userName) {
+        output.innerHTML = "*The username field cannot be empty";
+    }else{
+        output.style.display = "none";
+    }
+}
 
+//This function allows an error message to be shown if both the email and phone number fields are blank in the booking form
+function emailPhone(){
+    //assign phoneNumber to empty array which the user populates
+    var phoneNumber = [];
+    //assign phoneNumber to empty String which the user populates
+    var email = "";
+    //values user enters for email and phone are assigned to variables
+    var phoneNumber = document.getElementById("bookingPhone").value;
+    var email = document.getElementById("bookingEmail").value;
+    var output = document.getElementById("bookingContactOutput");
+    //if both email and phone are empty display error message
+    if(phoneNumber == [] && email == ""){
+        output.innerHTML = "*You must enter either a contact email or phone number";
+    }else{
+        output.style.display = "none";
+    }
+}
 
-//     var bookingOutput = document.getElementById("showBookingDetails");
-//     bookingOutput.innerHTML = "Hello " + userName
-// }
+//NEEDS MORE WORK
+function validateServices(){
+    var servicesSelected = document.getElementById("servicesRequired").value;
+    var output = document.getElementById("bookingServiceOutput");
+    if(servicesSelected == "What service(s) do you want to book?"){
+        output.innerHTML = "You must choose at least one service";
+    }
+}
+
+//NEEDS MORE WORK
+function validateDate(){
+    //get value of selected date
+    var dateSelected = document.getElementById("bookingDate").value;
+    var selectedDate = new Date(dateSelected);
+    var now = new Date();
+    var output = document.getElementById("dateError");
+    if(!dateSelected){
+        output.innerHTML = "You haven't selected a date yet";
+    }else if(selectedDate < now){
+        output.innerHTML = "You cannot select a date in the past";
+    }else{
+        output.style.display = "none";
+    }
+}
+
 
 
 

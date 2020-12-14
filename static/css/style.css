@@ -15,10 +15,14 @@ html, body{
 }/*sets the height and width of the banner images for the services and home page*/
 
 .headerHeading{
-    padding-top: 1em;
+    padding:1em 1em 0em 1em;
     text-align: center;
     font-size: 4em;
 }/*sets padding, center text alignment and font size for eading under banner images*/
+
+.textCenter{
+    text-align: center;
+}/*centers text*/
 
 /*NAVBAR*/
 .stickyNav {
@@ -32,15 +36,23 @@ html, body{
     margin-right: 2em;
 }/*Sets margin for the 'Book an Appontment' navbar heading*/
 
-.textCenter{
-    text-align: center;
-}/*centers text*/
+.navbar-light .navbar-nav .nav-link{
+    transition-duration: .5s;
+    transition-timing-function: ease-in-out;
+}
+
+.navbar-light .navbar-nav .nav-link:hover{
+    font-size: 1.1em;
+}/*Increases the font size of whatever navbar heading is hovered over*/
 
 /*INDEX PAGE*/
 .jumbotron{
     font-size: 3em;
     text-align: center;
-    padding:2em 2em 1em 2em;
+    padding:4em;
+    height: 80%;
+    background-color: black;
+    color: white;
 }
 
 .jumbotron .carousel-control-prev,
@@ -48,6 +60,11 @@ html, body{
     max-height: 1em;
     position: absolute;
     top: 50%;
+}
+
+.carousel-item{
+    overflow: hidden;
+    height: 100%;
 }
 
 .fa-star{
@@ -63,17 +80,18 @@ html, body{
 }
 
 .questionImg{
-    max-height: auto;
     padding: .5em;
     width: 100%;
+    height: 80%;
+    margin: 10% 0;
     border: 1px solid black;
     border-radius: 50%;
-}
+}/*Styling for the question mark image on the index page*/
 
-.accordionBox{
+.whyAccordionBox{
     text-align: center;
-    padding: .5em;
-    margin-top: 1.4em;
+    margin: 10% 0;
+    height: 80%;
 }/*Text area for Why choose us section*/
 
 .card a{
@@ -86,43 +104,61 @@ html, body{
 
 .accordionImage{
     width: 100%;
-    height: 25em;
+    height: 100%;
 }
 
 #homeBottomAccordion{
-    margin: 2em;
+    width: 100%;
+    padding: 1em 0;
 }/*Bottom accordion on home page where address and phone number area*/
+
+iframe{
+    height: 100%;
+}
+
+.bottomAccordionText{
+    font-size: 1.5em;
+    height: 80%;
+    margin: 10% 0%;
+    text-align: center;
+}/*Styles the address on the index page*/
 
 .card button{
     width: 100%;
 }/*allows the full width of the accordion to be a button*/
 
+.card button{
+    transition: 0.5s;
+    transition-timing-function: ease-in-out;   
+}
+
 .card button:hover{
     text-decoration: none;
     font-size: 1.1em;
-    transition: 0.5s;
-    transition-timing-function: ease-in-out;
 }/*stops the underline of the accordion headings when they are hovered over*/
 
 .card button:focus{
     text-decoration: none;
     font-size: 1.1em;
-    transition-timing-function: ease-in-out;
-    transition: 0.5s;
 }/*if a accordion is opened the heading for the accordion is increased in size*/
+
+
 /*SERVICES PAGE*/
-
-
-
-
 .serviceImg{
-    height: 38em;
-    display: block;
     width: 100%;
+    height: 100%;
 }/*This class is used for all the service images beside the service text descriptions on the services page*/
 
+@media only screen and (min-width: 480px){
+    .serviceImg{
+        height: 80%;
+        margin: 10% 0%;
+    }
+}
+
+
 .serviceBox{
-    padding: 1em;
+    padding: 0.1em;
 }
 
 .serviceBox h2{
@@ -134,11 +170,17 @@ html, body{
     text-align: center;
 }
 
-.fa-clock:hover{
-    color: red;
+.fa-euro-sign, .fa-euro-sign{
     transition: 0.5s;
     transition-timing-function: ease-in-out;
+}
+.fa-clock:hover{
+    color: red;
 }/*Clock icons for services duration changes to red when hovered over*/
+
+.fa-euro-sign:hover{
+    color: green;
+}/*Euro icons for service cost changes to green when hovered over*/
 
 /*Tyre service area*/
 .centerButton{
@@ -147,7 +189,6 @@ html, body{
 }
 
 /*BOOK AN APPOINTMENT*/
-
 .bookingForm{
     width: 100%;
     display: inline-block;
@@ -160,6 +201,24 @@ html, body{
     margin-right: auto;
 }
 
+#bookingName, #bookingPhone, #bookingEmail, #servicesRequired, #bookingDate, #bookingTime{
+    width: 100%;
+}/*Makes some of the booking form input areas 100% in width*/
+
+#extraBookingDetails{
+    width: 100%;
+    height: 8em;
+}/*styling for text area on booking form*/
+
+.requiredInput{
+    color: red;
+    font-size: 2em;
+}
+
+.bookingFormError{
+    color:#ff0000;
+    text-align: center;
+}/*If error on booking form they will be coloured red*/
 
 .hiddenCollectionArea{
     display: none;
@@ -173,27 +232,22 @@ html, body{
     display: none;
 }
 
+#submitDetailsBtn{
+    display: none;
+}/*hides submit vutton on booking form until check details is clicked*/
+
 /*FOOTER*/
 footer{
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 2em;
     line-height: 2em;
     background-color: #F5F5F5;
     letter-spacing: 2px;
 }
 
 footer p {
-    font-family: 'Lato', sans-serif;
     text-align: center;
-    margin: auto;
 } /* Footer text styling */
 
 .card-body{
     border: none;
 }/*Removes the border from the bootstrap accordian*/
 
-.test{
-    height: 100%;
-}
