@@ -142,6 +142,10 @@ iframe{
     font-size: 1.1em;
 }/*if a accordion is opened the heading for the accordion is increased in size*/
 
+.indexEmail{
+    max-width: 10%;
+}
+
 
 /*SERVICES PAGE*/
 .serviceImg{
