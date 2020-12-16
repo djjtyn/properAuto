@@ -27,7 +27,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light stickyNav">
             <!--Navbar logo-->
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand" href="index.html"><i class="fas fa-wrench"></i></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -79,20 +79,23 @@
         <img src="static/img/speedometer.jpg" alt="speedometer" class="bannerImg">
     </header>
     <main>
-        <p class="bookingParagraph">Please fill out the form below to book an appointment. The more detail put nto your for,
+        <p class="bookingParagraph">Please fill out the form below to book an appointment. The more detail put nto your
+            for,
             the quicker we'll be able to assess and diagnose
             the issue you have. Once your form is submitted to our team we will get back to you ASAP to confirm wheither
-            we can accomadate your booking time/date preferences. If we are fully booked up for that time, we will provide an alternate date
+            we can accomadate your booking time/date preferences. If we are fully booked up for that time, we will
+            provide an alternate date
             and time you can avail of.
         </p>
         <div class="formWrap">
-            <form class="col-sm-12 bookingForm">
+            <form class="col-sm-12 bookingForm" action="mailto:bookings@properAuto.ie" method="post">
                 <!--Body of form(Input Areas)-->
-
                 <table class="bookingFormTable">
                     <thead>
                         <tr>
-                            <td><h2 class="textCenter">Booking Form</h2></td>
+                            <td>
+                                <h2 class="textCenter">Booking Form</h2>
+                            </td>
                         </tr>
                     </thead>
                     <tbody>
@@ -101,24 +104,29 @@
                             <td><span class="requiredInput">*</span>Your Name:</td>
                         </tr>
                         <tr>
-                            <td><input type="text" placeholder="What is your name?" id="bookingName" name="bookingName" required></td>
+                            <td><input type="text" placeholder="What is your name?" id="bookingName" name="bookingName"
+                                    required></td>
                         </tr>
                         <tr>
-                            <td><p class="bookingFormError" id="bookingNameOutput"></p></td>
+                            <td>
+                                <p class="bookingFormError" id="bookingNameOutput"></p>
+                            </td>
                         </tr>
                         <!--Phone section-->
                         <tr>
                             <td>Phone Number:</td>
                         </tr>
                         <tr>
-                            <td><input type="tel" placeholder="What is your phone number?" id="bookingPhone" name="bookingPhone"></td>
+                            <td><input type="tel" placeholder="What is your phone number?" id="bookingPhone"
+                                    name="bookingPhone"></td>
                         </tr>
                         <!--Email section-->
                         <tr>
                             <td>Email Address:</td>
                         </tr>
                         <tr>
-                            <td><input type="email" placeholder="What is your email address?" id="bookingEmail" name="bookingEmail">
+                            <td><input type="email" placeholder="What is your email address?" id="bookingEmail"
+                                    name="bookingEmail">
                             </td>
                         </tr>
                         <tr>
@@ -145,7 +153,9 @@
                             </td>
                         </tr>
                         <tr>
-                            <td><p class="bookingFormError" id="bookingServiceOutput"></p></td>
+                            <td>
+                                <p class="bookingFormError" id="bookingServiceOutput"></p>
+                            </td>
                         </tr>
                         <!--Preferred Date section-->
                         <tr>
@@ -187,7 +197,7 @@
                         </tr>
                         <tr class="hiddenCollectionArea">
                             <td>
-                                <input type="text" required placeholder="Collection Point">
+                                <input type="text" placeholder="Collection Point">
                             </td>
                         </tr>
                         <tr class="hiddenCollectionArea">
@@ -195,7 +205,7 @@
                         </tr>
                         <tr class="hiddenCollectionArea">
                             <td>
-                                <input type="text" required placeholder="Dropoff Point">
+                                <input type="text" placeholder="Dropoff Point">
                             </td>
                         </tr>
                         <!--Car Registration section-->
@@ -251,7 +261,7 @@
                         </tr>
                         <tr>
                             <td id="submitDetailsBtn" class="textCenter">
-                                <input type="submit">
+                                <input type="submit" value="Submit">
                             </td>
                         </tr>
                     </tfoot>

@@ -168,6 +168,10 @@ iframe{
 }
 
 .serviceBox h2{
+    text-decoration: underline;
+}
+
+.serviceBox h2{
     padding: 1em;
 }
 

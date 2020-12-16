@@ -20,10 +20,13 @@ $(document).ready(function () {
             $("#showBookingDetails").addClass("bookingFormError");
             $("#showBookingDetails").html("Hello " + userName + ". You have not fully completed the booking form.");
         }else{
-    $("#showBookingDetails").html("Hello" + userName + ". You want to book for " + selectedDate + "<br>We can contact you at " + phoneNumber
-     + " and " + email + ". Your selected service is: <br>" + servicesSelected + "<br>Which brings your cost to &euro;" + totalCost);
-     $("#submitDetailsBtn").show();
+            $("#showBookingDetails").addClass("bookingFormError");
+            $("#showBookingDetails").html("Hello " + userName + ". You want to book for " + selectedDate + "<br>We can contact you at " + phoneNumber
+                + " and " + email + ". Your selected service is: <br>" + servicesSelected + "<br>Which brings your cost to &euro;" + totalCost);
+            $("#submitDetailsBtn").show();
         }
+        //this stops the check details button from submitting the form as that should only be done by the submit button
+        return false;
     })
     //service choice to listen for change in selection on book appointment form and add the service cost to the total cost variable
     $("#servicesRequired").change(function () {
@@ -55,13 +58,6 @@ $(document).ready(function () {
             totalCost += 20;
         }
     })
-
- 
-
-
-        
-        //if selected date is before current date display error
-       
     //if car collection/dropoff box is checked
     $("#carCollection").change(function () {
         if($("#carCollection").is(":checked")){
