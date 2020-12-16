@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ProperAuto Car Services</title>
+    <title>Car Services</title>
     <!--Bootstrap CSS cdn-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -17,10 +17,47 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-
     <!--Font Awesome CDN-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
         integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "LocalBusiness",
+                "@id": "https://djjtyn.github.io/properAuto/services.html",
+                "name": "Proper Auto Car Service",
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "Unit One Swords Business Campus",
+                  "addressLocality": "Swords",
+                  "addressRegion": "Dublin",
+                  "postalCode": "K67",
+                  "addressCountry": "Ireland"
+                },
+                "aggregateRating" : {
+                  "@type" : "AggregateRating",
+                  "ratingValue" : "5",
+                  "ratingCount" : "300"
+                  },
+                "url": "https://djjtyn.github.io/properAuto/services.html",
+                "image": "https://djjtyn.github.io/properAuto/static/img/workshop.jpg",
+                "priceRange": "0-300",
+                "telephone": "08612345678",
+                "openingHoursSpecification": [
+                  {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": [
+                      "Monday",
+                      "Tuesday",
+                      "Wednesday",
+                      "Thursday",
+                      "Friday"
+                    ],
+                    "opens": "09:00",
+                    "closes": "21:00"
+                  }]
+              }
+        </script>
 </head>
 
 <body>
@@ -41,7 +78,7 @@
                     </li>
                     <!--Services dropdown section-->
                     <li class="nav-item dropdown active">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        <a class="nav-link dropdown-toggle" href="services.html" id="navbarDropdown" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Services
                         </a>
@@ -77,12 +114,22 @@
             </div>
         </nav>
         <!--Banner image above main area-->
-        <img src="static/img/workshop.jpg" alt="workshop" class="bannerImg">
+        <img src="static/img/workshop.jpg" alt="carservices" class="bannerImg">
         <!--Pages main heading-->
-        <h1 class="headerHeading">Proper Auto Car Services</h1>
+        <h1 class="headerHeading">Car Services</h1>
     </header>
+
     <!--Main area is where all the services are listed-->
     <main>
+        <p class="paragraphBelowBanner">At Proper Auto we provide great attention to detail on all our <b>Car
+                Services</b>. While maintaining great
+            attention to details, we also pride ourself on our quick turnaround time. Some of our car services will be
+            done in under an hour and the
+            longest that customers will be waiting for their car services to be finished is 4 hours. Each car service
+            listed has it's cost and
+            how long that particular car service will take listed below its details.
+
+        </p>
         <!--container for bootstrap grid-->
         <div class="container-fluid">
             <!--Cleaning Service row-->
@@ -95,23 +142,26 @@
                         We clean both the interior and exterior of your car with state of the art equipment.</p>
                     <p>What you can expect:</p>
                     <ol>
-                        <li>Your car will be throughly polished on the inside.</li>
-                        <li>Your car will be vacuumed.</li>
-                        <li>The carpets and mats in your car will be cleaned using a steam cleaner which will eliminate
+                        <li>Your car will be thoroughly <b>polished</b> on the inside.</li>
+                        <li>Your car will be <b>vacuumed</b>.</li>
+                        <li>The carpets and mats in your car will be cleaned using a <b>steam cleaner</b> which will
+                            eliminate
                             all stains or dirt.
                         </li>
-                        <li>For them hard to reach areas, an air compressor will be used to ensure there is no residue
-                            dirt.</li>
-                        <li>All the windows of the car will be cleaned from the inside using our custom windlw cleaning
-                            solution which will
-                            ensure the glass is sparkling clean without obstructing driver and passenggers views.</li>
-                        <li>For leather seats, we use a custom leather cleaner, saddle soap, leather soap and
-                            conditioner combination to ensure
-                            the seats are cleaned thoroughly</li>
-                        <li>The cars dashboard and windows will be wiped clean using a cloth soaked in our custom
-                            cleaning detergent.</li>
-                        <li>After carrying out these steps, your car will be re-vacuumed.</li>
-                        <li>To finish the cleaning process, we will use a deodorant to enusre your car has that new car
+                        <li>For those hard to reach areas, an <b>air compressor</b> will be used to ensure there is no
+                            residue
+                            dirt left over after the vacuum.</li>
+                        <li>All the windows of the car will be cleaned from the inside using our <b>custom window
+                                cleaning
+                                solution</b> which will ensure the glass is sparkling clean without obstructing driver
+                            and passenggers views.</li>
+                        <li>For leather seats, we use a <b>custom leather cleaner, saddle soap, leather soap and
+                                conditioner</b> combination to ensure the seats are cleaned thoroughly</li>
+                        <li>The cars dashboard and windows will be wiped clean using a cloth soaked in our <b>custom
+                                cleaning detergent</b>.</li>
+                        <li>After carrying out these steps, your car will be <b>re-vacuumed</b>.</li>
+                        <li>To finish the cleaning process, we will use a <b>car deodorant</b> to enusre your car has
+                            that new car
                             smell.</li>
                     </ol>
                     <!--Shows duration and cost for each particular service-->
@@ -120,7 +170,7 @@
                             <!--Font Awesome Clock icon-->
                             <div class="col-sm-6">
                                 <i class="far fa-clock"></i>
-                                <h3>Approx 1 hour</h3>
+                                <h3>Approx 1 Hour</h3>
                             </div>
                             <!--Font awesome Euro-->
                             <div class="col-sm-6">
@@ -132,7 +182,7 @@
                 </div>
                 <!--Cleaning service picture area-->
                 <div class="col-sm-12 col-md-6">
-                    <img src="static/img/carwash.jpg" alt="carwash" class="serviceImg">
+                    <img src="static/img/carwash.jpg" alt="carvalet" class="serviceImg">
                 </div>
             </div>
             <hr>
@@ -141,11 +191,12 @@
                 <!--Clutch replacement text area: On medium screens up this area is shown on right hand side-->
                 <div class="col-sm-12 col-md-6 order-md-2">
                     <h2 class="textCenter">Clutch Replacement</h2>
-                    <p>Here at <b>ProperAuto</b> we know clutches can be a bit of a hassle. At some point in your cars
-                        life the clutch is
-                        guaranteed to malfunction which is why we offer a <b>Clutch Replacement Service</b> to our
-                        customers. There are a few sure signs
-                        your clutch needs to be replaced. We have listed just some of these:</p>
+                    <p>Here at <b>ProperAuto</b> we know <b>car clutches</b> can be a bit of a hassle. At some point in
+                        your cars life the
+                        clutch is most likely going to malfunction which is why we offer a <b>Clutch Replacement
+                            Service</b> to our
+                        customers. There are a few sure signs your clutch needs to be replaced. We have listed just some
+                        of these:</p>
                     <ul>
                         <li>If you are finding it difficult to change gears.</li>
                         <li>If the gears are changing by themselves.</li>
@@ -159,7 +210,7 @@
                             <!--Font Awesome Clock icon-->
                             <div class="col-sm-6">
                                 <i class="far fa-clock"></i>
-                                <h3>Approx 1 hour</h3>
+                                <h3>Approx 1.5 Hours</h3>
                             </div>
                             <!--Font awesome Euro icon-->
                             <div class="col-sm-6">
@@ -167,198 +218,200 @@
                                 <h3>&euro;300</h3>
                             </div>
                         </div>
-                </div>
-            </div>
-            <!--Clutch replacement image area: On medium screens up this area is shown on left hand side-->
-            <div class="col-sm-12 col-md-6 order-md-1">
-                <img src="static/img/gearstick.jpg" alt="gearstick" class="serviceImg">
-            </div>
-        </div>
-        <hr>
-        <!--Full Service area-->
-        <div class="row serviceBox" id="full_service">
-            <!--Full Service text area-->
-            <div class="col-sm-12 col-md-6">
-                <h2 class="textCenter">Full Service</h2>
-                <p>At <b>ProperAuto</b> we can do a <b>Full Car Service</b> on your car. There are a lot of steps
-                    invloved in carrying out
-                    this full car service</p>
-                <p>You can view all the steps we do by clicking the button below</p>
-                <p>
-                    <a class="btn btn-primary centerButton" data-toggle="collapse" href="#fullServiceList" role="button"
-                        aria-expanded="false" aria-controls="fullServiceList">What's
-                        Involved</a>
-                </p>
-                <div class="collapse" id="fullServiceList">
-                    <!--Button above toggles whhether area below can be seen or not-->
-                    <div class="card card-body">
-                        <ol>
-                            <li>We will check all your car gauges, warning lights and horn are working properly.
-                            </li>
-                            <li>We will check to ensure all the interior and exterior lights are working properly.
-                            </li>
-                            <li>We will check the condition of your window wipers, that the washers are working
-                                properly and we will top up your water fluids.</li>
-                            <li>We wil lcheck your brake fluid level and top this up for you if its required.</li>
-                            <li>We will check your clutch and power steering fluid level. We will top your power
-                                steering fluid level if its required.</li>
-                            <li>We will check your cars battery terminals.</li>
-                            <li>We will replace your spark plugs.</li>
-                            <li>We will check that your handbrake is working properly.</li>
-                            <li>We will check your brake pedal is working properly.</li>
-                            <li>We will check your cars timing belt is working properly and give advice on when it
-                                will need to be replaced.</li>
-                            <li>We will check the engine and gearbox mountings for damage.</li>
-                            <li>We will check under the cars body for corrosion or any other damage.</li>
-                            <li>We will check the cars cooling system to make sure it is working properly. </li>
-                            <li>We will replace your cars oil filter.</li>
-                            <li>We will replace the engine oil.</li>
-                            <li>We will replace your air filter.</li>
-                            <li>We wil lcheck your brake pad discs are working properly without damage.</li>
-                            <li>We wil lcheck the cars steering rack, suspension, mountings and gaiters.</li>
-                            <li>We will check all track rod ends and ball joints for damage.</li>
-                            <li>We will check the drive shaft joints for damage.</li>
-                            <li>We will check the exhaust system is working properly.</li>
-                            <li>We will check for any signs of brake fluid leakage on the brake plates</li>
-                            <li>We will check your shock absorbers are working properly.</li>
-                            <li>We will check that your tyres are road worthy and adjust your tyre pressure if
-                                required.</li>
-                            <li>We will check your wheel bearings are working properly</li>
-                            <li>We will drive your car after all the previous checks are done to ensure everything
-                                runs smoothly.</li>
-                            <li>After all the checks, we will stamp your cars service book.</li>
-                        </ol>
                     </div>
                 </div>
-                <div class="serviceIconArea">
-                    <div class="row">
-                        <!--Font Awesome Clock icon-->
-                        <div class="col-sm-6">
-                            <i class="far fa-clock"></i>
-                            <h3>Approx 1 hour</h3>
-                        </div>
-                        <!--Font awesome Euro icon-->
-                        <div class="col-sm-6">
-                            <i class="fas fa-euro-sign"></i>
-                            <h3>&euro;100</h3>
-                        </div>
-                    </div>
+                <!--Clutch replacement image area: On medium screens up this area is shown on left hand side-->
+                <div class="col-sm-12 col-md-6 order-md-1">
+                    <img src="static/img/gearstick.jpg" alt="gearstick" class="serviceImg">
                 </div>
             </div>
-            <!--Full Service image area-->
-            <div class="col-sm-12 col-md-6">
-                <img src="static/img/carservice.jpg" alt="carservice" class="serviceImg">
-            </div>
-        </div>
-        <hr>
-        <!--Pre NCT area-->
-        <div class="row serviceBox" id="pre_nct_check">
-            <!--Pre NCT text area: On medium screens up this area is shown on right hand side-->
-            <div class="col-sm-12 col-md-6 order-md-2">
-                <h2 class="textCenter">Pre NCT Checks</h2>
-                <p>A <b>Pre NCT check</b> is a great idea if you have your <b>National Car Test(NCT)</b> coming up
-                    and you have concerns about
-                    whether your car will pass or not.</p>
-                <p>The <b>NCT</b> is a compulsory vehicle inspection programme in Ireland. The main aim of the NCT
-                    is to improve road
-                    safety and ensure that all cars on the road are roadworthy and have no defects which may lead to
-                    an accident. For vehicles
-                    younger than 10 years, the NCT is conducted every 2 years and if it is older than this the NCT
-                    is conducted annually</p>
-                <p>Our Pre NCT checks are free of charge and we will check <b>wipers</b>, all <b>bulbs</b>, <b>tyre
-                        state</b>, <b>tyre pressure</b>
-                    and <b>brake pads and discs</b></p>
-                <div class="serviceIconArea">
-                    <div class="row">
-                        <!--Font Awesome Clock icon-->
-                        <div class="col-sm-6">
-                            <i class="far fa-clock"></i>
-                            <h3>Approx 1 hour</h3>
+            <hr>
+            <!--Full Service area-->
+            <div class="row serviceBox" id="full_service">
+                <!--Full Service text area-->
+                <div class="col-sm-12 col-md-6">
+                    <h2 class="textCenter">Full Service</h2>
+                    <p>At <b>ProperAuto</b> we can do a <b>Full Car Service</b> on your car. There are a lot of steps
+                        invloved in carrying out
+                        this full car service</p>
+                    <p>You can view all the steps we do by clicking the button below</p>
+                    <p>
+                        <a class="btn btn-primary centerButton" data-toggle="collapse" href="#fullServiceList"
+                            role="button" aria-expanded="false" aria-controls="fullServiceList">What's
+                            Involved</a>
+                    </p>
+                    <div class="collapse" id="fullServiceList">
+                        <!--Button above toggles whhether area below can be seen or not-->
+                        <div class="card card-body">
+                            <ol>
+                                <li>We will check all your car gauges, lights and horn are all working properly.
+                                </li>
+                                <li>We will check the condition of your window wipers, that the washers are working
+                                    properly and we will top up your water fluids.</li>
+                                <li>We will check your brake fluid level and top this up for you if its required.</li>
+                                <li>We will check your clutch and power steering fluid level. We will top your power
+                                    steering fluid level if its required.</li>
+                                <li>We will check your cars battery terminals.</li>
+                                <li>We will replace your spark plugs.</li>
+                                <li>We will check that your handbrake is working properly.</li>
+                                <li>We will check your brake pedal is working properly.</li>
+                                <li>We will check your cars timing belt is working properly and give advice on when it
+                                    will need to be replaced.</li>
+                                <li>We will check the engine and gearbox mountings for damage.</li>
+                                <li>We will check under the cars body for corrosion or any other damage.</li>
+                                <li>We will check the cars cooling system to make sure it is working properly. </li>
+                                <li>We will replace your cars oil filter.</li>
+                                <li>We will replace the engine oil.</li>
+                                <li>We will replace your air filter.</li>
+                                <li>We will check your brake pad discs are working properly and aren't damage.</li>
+                                <li>We will check the cars steering rack, suspension, mountings and gaiters are all
+                                    working properly.</li>
+                                <li>We will check all track rod ends and ball joints for damage.</li>
+                                <li>We will check the drive shaft joints for damage.</li>
+                                <li>We will check the exhaust system is working properly.</li>
+                                <li>We will check for any signs of brake fluid leakage on the brake plates</li>
+                                <li>We will check your shock absorbers are working properly.</li>
+                                <li>We will check that your tyres are road worthy and adjust your tyre pressure if
+                                    required.</li>
+                                <li>We will check if your wheel bearings are working properly</li>
+                            </ol>
+                            <p>After carrying out all these checks we will perform a road test by driving your car to
+                                ensure everything runs
+                                smoothly. After completing this road test we will stamp your cars service book if it
+                                passes or else continue working
+                                on the car if it fails.</li>
+                            </p>
                         </div>
-                        <!--Font awesome Euro icon-->
-                        <div class="col-sm-6">
-                            <i class="fas fa-euro-sign"></i>
-                            <h3>Free!</h3>
+                    </div>
+                    <div class="serviceIconArea">
+                        <div class="row">
+                            <!--Font Awesome Clock icon-->
+                            <div class="col-sm-6">
+                                <i class="far fa-clock"></i>
+                                <h3>Approx 4 Hours</h3>
+                            </div>
+                            <!--Font awesome Euro icon-->
+                            <div class="col-sm-6">
+                                <i class="fas fa-euro-sign"></i>
+                                <h3>&euro;100</h3>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <!--Full Service image area-->
+                <div class="col-sm-12 col-md-6">
+                    <img src="static/img/carservice.jpg" alt="carservice" class="serviceImg">
+                </div>
             </div>
-            <!--Pre NCT image area:On medium screens up this area is shown on left hand side-->
-            <div class="col-sm-12 col-md-6 order-md-1">
-                <img src="static/img/carmaintenance.jpg" alt="carmaintenance" class="serviceImg">
+            <hr>
+            <!--Pre NCT area-->
+            <div class="row serviceBox" id="pre_nct_check">
+                <!--Pre NCT text area: On medium screens up this area is shown on right hand side-->
+                <div class="col-sm-12 col-md-6 order-md-2">
+                    <h2 class="textCenter">Pre NCT Checks</h2>
+                    <p>A <b>Pre NCT Check</b> is a great idea if you have your <b>National Car Test(NCT)</b> coming up
+                        and you have concerns about whether your car will pass or not.</p>
+                    <p>The <b>NCT</b> is a compulsory vehicle inspection programme in Ireland. The main aim of the NCT
+                        is to improve road safety and ensure that all cars on the road are roadworthy and have no
+                        defects which may lead to
+                        an accident. For vehicles younger than 10 years, the NCT is conducted every 2 years and if the
+                        car is older than this
+                        the NCT is conducted annually</p>
+                    <p>Our Pre NCT checks are <b></b>free of charge and we will check <b>wipers</b>, all <b>bulbs</b>,
+                        <b>tyre
+                            state</b>, <b>tyre pressure</b>, <b>brake pads</b> and <b>discs</b></p>
+                    <div class="serviceIconArea">
+                        <div class="row">
+                            <!--Font Awesome Clock icon-->
+                            <div class="col-sm-6">
+                                <i class="far fa-clock"></i>
+                                <h3>Approx 50 Mins</h3>
+                            </div>
+                            <!--Font awesome Euro icon-->
+                            <div class="col-sm-6">
+                                <i class="fas fa-euro-sign"></i>
+                                <h3>Free!</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Pre NCT image area:On medium screens up this area is shown on left hand side-->
+                <div class="col-sm-12 col-md-6 order-md-1">
+                    <img src="static/img/carmaintenance.jpg" alt="carmaintenance" class="serviceImg">
+                </div>
             </div>
-        </div>
-        <hr>
-        <!--Tyre Fitting area-->
-        <div class="row serviceBox" id="tyre_fitting">
-            <!--Tyre Fitting text area-->
-            <div class="col-sm-12 col-md-6">
+            <hr>
+            <!--Tyre Fitting area-->
+            <div class="row serviceBox" id="tyre_fitting">
                 <!--Tyre Fitting text area-->
-                <h2 class="textCenter">Tyre Fitting</h2>
-                <p>As part of our <b>Tyre Fitting</b> service we will dispose of your old tyres. No matter what make
-                    or model your car is rest
-                    assure that our team of qualified mobile tyre fitters can fit them.</p>
-                <p>If you need to buy the tyres but aren't sure what particular tyres you need, check our <b>Get a
-                        Tyre Quote</b> section
-                    which will allow you to type in the registration of your car and some contact details for
-                    yourself which will be sent on to
-                    our team who will then check exactly what tyres you need and provide a list of tyres suiting
-                    different budgets.</p>
-                <div class="serviceIconArea">
-                    <div class="row">
-                        <!--Font Awesome Clock icon-->
-                        <div class="col-sm-6">
-                            <i class="far fa-clock"></i>
-                            <h3>Approx 1 hour</h3>
+                <div class="col-sm-12 col-md-6">
+                    <!--Tyre Fitting text area-->
+                    <h2 class="textCenter">Tyre Fitting</h2>
+                    <p>As part of our <b>Tyre Fitting</b> service we will dispose of your old tyres. No matter what make
+                        or model your car is rest
+                        assure that our team of qualified mobile tyre fitters can fit the tyres in a short space of
+                        time.</p>
+                    <p>If you need to buy the tyres but aren't sure what particular tyres you need, check our <b>Get a
+                            Tyre Quote</b> section
+                        which will allow you to type in the registration of your car and some contact details for
+                        yourself which will be sent on to
+                        our team who will then check exactly what tyres you need and provide a list of tyres suiting
+                        different budgets.</p>
+                    <div class="serviceIconArea">
+                        <div class="row">
+                            <!--Font Awesome Clock icon-->
+                            <div class="col-sm-6">
+                                <i class="far fa-clock"></i>
+                                <h3>Approx 30 Mins</h3>
+                            </div>
+                            <!--Font awesome Euro icon-->
+                            <div class="col-sm-6">
+                                <i class="fas fa-euro-sign"></i>
+                                <h3>&euro;10</h3>
+                            </div>
                         </div>
-                        <!--Font awesome Euro icon-->
-                        <div class="col-sm-6">
-                            <i class="fas fa-euro-sign"></i>
-                            <h3>&euro;10</h3>
+                    </div>
+                    <a class="btn btn-primary centerButton" href="#" role="button">Get a Tyre Quote!</a>
+                </div>
+                <!--Tyre Fitting image area-->
+                <div class="col-sm-12 col-md-6">
+                    <img src="static/img/cartyrefitting.jpg" alt="tyrefitting" class="serviceImg">
+                </div>
+            </div>
+            <hr>
+            <!--Wheel Allignment area-->
+            <div class="row serviceBox" id="wheel_alignment">
+                <!--Wheel Allignment text area::On medium screens up this area is shown on right hand side-->
+                <div class="col-sm-12 col-md-6 order-md-2">
+                    <h2 class="textCenter">Wheel Alignment</h2>
+                    <p>Driving a car that doesn't have its wheels properly alligned could cause uneven wear on your
+                        tyres causing issues with
+                        steering.</p>
+                    <p>At <b>ProperAuto</b> we provide a <b>Wheel Allignment</b> service which will ensure that your
+                        tyres are <b>properly alligned</b>
+                        minimising uneven wear on the tyres.</p>
+                    <p>We use state of the art computers to check and align your tyres so you can be assured that no
+                        error will be missed.</p>
+                    <div class="serviceIconArea">
+                        <div class="row">
+                            <!--Font Awesome Clock icon-->
+                            <div class="col-sm-6">
+                                <i class="far fa-clock"></i>
+                                <h3>Approx 1 Hour</h3>
+                            </div>
+                            <!--Font awesome Euro icon-->
+                            <div class="col-sm-6">
+                                <i class="fas fa-euro-sign"></i>
+                                <h3>&euro;20</h3>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <a class="btn btn-primary centerButton" href="#" role="button">Get a tyre quote!</a>
-            </div>
-            <!--Tyre Fitting image area-->
-            <div class="col-sm-12 col-md-6">
-                <img src="static/img/cartyrefitting.jpg" alt="tyrefitting" class="serviceImg">
-            </div>
-        </div>
-        <hr>
-        <!--Wheel Allignment area-->
-        <div class="row serviceBox" id="wheel_alignment">
-            <!--Wheel Allignment text area::On medium screens up this area is shown on right hand side-->
-            <div class="col-sm-12 col-md-6 order-md-2">
-                <h2 class="textCenter">Wheel Alignment</h2>
-                <p>Driving a car that doesn't have its wheels properly alligned could cause uneven wear on your
-                    tyres causing issues with
-                    steering.</p>
-                <p>At <b>ProperAuto</b> we provide a <b>Wheel Allignment</b> service which will ensure that your
-                    tyres are properly alligned
-                    minimising uneven wear on the tyres.</p>
-                <p>We use state of the art computers to check and align your tyres so you can be assured that no
-                    error wil lbe missed.</p>
-                <div class="serviceIconArea">
-                    <div class="row">
-                        <!--Font Awesome Clock icon-->
-                        <div class="col-sm-6">
-                            <i class="far fa-clock"></i>
-                            <h3>Approx 1 hour</h3>
-                        </div>
-                        <!--Font awesome Euro icon-->
-                        <div class="col-sm-6">
-                            <i class="fas fa-euro-sign"></i>
-                            <h3>&euro;20</h3>
-                        </div>
-                    </div>
+                <!--Wheel Allignment image area:On medium screens up this area is shown on left hand side-->
+                <div class="col-sm-12 col-md-6 order-md-1">
+                    <img src="static/img/tyre.jpg" alt="cartyre" class="serviceImg">
                 </div>
             </div>
-            <!--Wheel Allignment image area:On medium screens up this area is shown on left hand side-->
-            <div class="col-sm-12 col-md-6 order-md-1">
-                <img src="static/img/tyre.jpg" alt="cartyre" class="serviceImg">
-            </div>
-        </div>
         </div>
     </main>
     <footer class="page-footer">

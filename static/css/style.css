@@ -20,6 +20,13 @@ html, body{
     font-size: 4em;
 }/*sets padding, center text alignment and font size for eading under banner images*/
 
+.paragraphBelowBanner{
+    font-size: 2em;
+    text-align: center;
+    margin: 1em;
+    padding: 1em;
+}
+
 .textCenter{
     text-align: center;
 }/*centers text*/
@@ -199,12 +206,6 @@ iframe{
 }
 
 /*BOOK AN APPOINTMENT*/
-.bookingParagraph{
-    font-size: 2em;
-    text-align: center;
-    margin: 1em;
-    padding: 1em;
-}
 .bookingForm{
     width: 100%;
     display: inline-block;
