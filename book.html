@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ProperAuto Home Page</title>
+    <title>Book a Car Service</title>
     <!--Bootstrap CSS cdn-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -20,6 +20,44 @@
     <!--Font Awesome CDN-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
         integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+    <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "LocalBusiness",
+                "@id": "https://djjtyn.github.io/properAuto/book.html",
+                "name": "Proper Auto Car Service",
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "Unit One Swords Business Campus",
+                  "addressLocality": "Swords",
+                  "addressRegion": "Dublin",
+                  "postalCode": "K67",
+                  "addressCountry": "Ireland"
+                },
+                "aggregateRating" : {
+                  "@type" : "AggregateRating",
+                  "ratingValue" : "5",
+                  "ratingCount" : "300"
+                  },
+                "url": "https://djjtyn.github.io/properAuto/book.html",
+                "image": "https://djjtyn.github.io/properAuto/static/img/workshop.jpg",
+                "priceRange": "0-300",
+                "telephone": "08612345678",
+                "openingHoursSpecification": [
+                  {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": [
+                      "Monday",
+                      "Tuesday",
+                      "Wednesday",
+                      "Thursday",
+                      "Friday"
+                    ],
+                    "opens": "09:00",
+                    "closes": "21:00"
+                  }]
+              }
+        </script>
 </head>
 
 <body>
@@ -70,22 +108,23 @@
                 <!--Book an Appointment set to show on right of navbar-->
                 <ul class="nav navbar-nav navbar-right">
                     <li class="nav-item active">
-                        <a class="nav-link" href="book.html">Book an Appointment</a>
+                        <a class="nav-link" href="book.html">Book a Car Service</a>
                     </li>
                 </ul>
             </div>
         </nav>
         <!--Banner image above main area-->
-        <img src="static/img/speedometer.jpg" alt="speedometer" class="bannerImg">
+        <img src="static/img/speedometer.jpg" alt="bookACarServiceImage" class="bannerImg">
+        <h1 class="headerHeading">Book a Car Service</h1>
     </header>
     <main>
-        <p class="paragraphBelowBanner">Please fill out the form below to book an appointment. The more detail put nto your
-            for,
-            the quicker we'll be able to assess and diagnose
-            the issue you have. Once your form is submitted to our team we will get back to you ASAP to confirm wheither
-            we can accomadate your booking time/date preferences. If we are fully booked up for that time, we will
-            provide an alternate date
-            and time you can avail of.
+        <p class="paragraphBelowBanner">Please fill out the form below to <b>book a car service</b>. Not all the forms
+            areas are required but
+            the more details that you give, the quicker we will be able to book a car service for you. Once your form is
+            submitted to our team we
+            will get back to you ASAP to confirm wheither we can accomadate your booking time/date preferences. If we
+            are fully booked up for that
+            date/time, we will provide an alternate date/time that may suit you.
         </p>
         <div class="formWrap">
             <form class="col-sm-12 bookingForm" action="mailto:bookings@properAuto.ie" method="post">
@@ -94,7 +133,7 @@
                     <thead>
                         <tr>
                             <td>
-                                <h2 class="textCenter">Booking Form</h2>
+                                <h2 class="textCenter">Book a Car Service</h2>
                             </td>
                         </tr>
                     </thead>
