@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>ProperAuto- Contact us</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
+        integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+    <script src="static/js/app.js"></script>
+
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light stickyNav">
+            <!--Navbar logo-->
+            <a class="navbar-brand" href="index.html"><i class="fas fa-wrench"></i></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only"></span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Services
+                        </a>
+                        <!--Dropdown options: Each link jumps to that particular section of the page-->
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="services.html#cleaning_service">Cleaning Service</a>
+                            <a class="dropdown-item" href="services.html#clutch_replacement">Clutch Replacement</a>
+                            <a class="dropdown-item" href="services.html#full_service">Full Service</a>
+                            <a class="dropdown-item" href="services.html#pre_nct_check">Pre NCT Check</a>
+                            <a class="dropdown-item" href="services.html#tyre_fitting">Tyre Fitting</a>
+                            <a class="dropdown-item" href="services.html#wheel_alignment">Wheel Allignment</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Tyre Quote</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="faq.html">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactUs.html">Contact Us</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-item">
+                        <a class="nav-link" href="book.html">Book an Appointment</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="bannerImg">
+        <!--Text over the background image-->
+        <img src="static/img/carkey.jpg" alt="carKey" class="box">
+        <h1 class="imagetext">Contact Us</h1>
+    </div>
+    <div class="formContainer">
+        <!--Contact form-->
+        <form action="mailto:enquiries@properAuto.ie" onsubmit="inquiryCheck();" method="POST" class="contactUsForm">
+            <label for="fname">Full Name</label>
+            <input type="text" id="fname" name="fullname" placeholder="Your name.." required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your email.." required>
+            <label for="inquiry">Inquiry Type</label>
+            <select id="inq" name="inquiry">
+                <option value="" selected disabled> -- Inquiry Type -- </option>
+                <option value="clutch">Clutch Replacement</option>
+                <option value="fullservice">Full service</option>
+                <option value="wheel">Wheel Allignment</option>
+                <option value="nct">Pre NCT check</option>
+                <option value="other">Other</option>
+            </select>
+            <label for="subject">Inquiry</label>
+            <textarea id="subject" name="subject" placeholder="How can we help?.." style="height:200px"></textarea>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+
+</html>

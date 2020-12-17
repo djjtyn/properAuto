@@ -139,6 +139,18 @@ function validateDate(){
 }
 
 
+/* Ensures inquiry field in contact us form is not empty and alerts user if it is. Opens new html page if form is succesful */
+function inquiryCheck(){
+    var subject = document.getElementById("subject");
+    if(subject.value == ""){
+          alert("Please fill in your Inquiry")
+            return false;
+         }else{
+            window.open("contactFormSubmit.html", "_self");
+        }
+    }
+
+
 
 
 
