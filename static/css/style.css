@@ -207,9 +207,11 @@ iframe{
     padding: 1em;
 }
 
-.serviceDescription{
-    height: 80%;
-    margin: 10% 0%;
+@media only screen and (min-width: 600px){
+    .serviceDescription{
+        height: 80%;
+        margin: 10% 0%;
+    }
 }
 
 .serviceIconArea{
