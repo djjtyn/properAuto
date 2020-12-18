@@ -47,6 +47,7 @@ html, body{
     top: 0px;
     width: 100%;
     z-index: 1;
+    background-color:#F5F5F5 !important;
 }/*Make navbar always at top of page, sets its width to 100% and its z index to 1 to have it always visible*/
 
 .navbar-right{
@@ -56,6 +57,7 @@ html, body{
 .navbar-light .navbar-nav .nav-link{
     transition-duration: .5s;
     transition-timing-function: ease-in-out;
+    margin: 0.5em 1em;
 }
 
 .navbar-light .navbar-nav .nav-link:hover{
@@ -203,6 +205,11 @@ iframe{
 
 .serviceBox h2{
     padding: 1em;
+}
+
+.serviceDescription{
+    height: 80%;
+    margin: 10% 0%;
 }
 
 .serviceIconArea{
