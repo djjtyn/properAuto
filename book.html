@@ -124,7 +124,7 @@
         </p>
         <div class="formBg">
             <div class="formContainer">
-                <form class="col-sm-12 bookingForm" action="mailto:bookings@properAuto.ie" method="post">
+                <form class="col-sm-12 bookingForm" action="bookingFormSubmit.html" method="post" onsubmit="bookingFormSubmit();">
                     <!--Body of form(Input Areas)-->
                     <table class="bookingFormTable">
                         <thead>
@@ -297,7 +297,7 @@
                             </tr>
                             <tr>
                                 <td id="submitDetailsBtn" class="textCenter">
-                                    <input type="submit" value="Submit">
+                                    <input type="submit" value="Submit" id="bookingSubmit">
                                 </td>
                             </tr>
                         </tfoot>

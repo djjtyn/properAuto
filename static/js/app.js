@@ -142,14 +142,19 @@ function validateDate(){
 /* Ensures inquiry field in contact us form is not empty and alerts user if it is. Opens new html page if form is succesful */
 function inquiryCheck(){
     var subject = document.getElementById("subject");
-    
-        if(subject.value.trim() == ""){
+    if(subject.value.trim() == ""){
           alert("Please fill in your Inquiry")
             return false;
          }else{
              return true;
     }
-    }
+}
+
+function bookingFormSubmit(){
+    window.open("bookingFormSubmit.html");
+}
+
+
 
 
 
