@@ -126,191 +126,194 @@
             are fully booked up for that
             date/time, we will provide an alternate date/time that may suit you.
         </p>
-        <div class="formContainer">
-            <form class="col-sm-12 bookingForm" action="mailto:bookings@properAuto.ie" method="post">
-                <!--Body of form(Input Areas)-->
-                <table class="bookingFormTable">
-                    <thead>
-                        <tr>
-                            <td>
-                                <h2 class="textCenter">Book a Car Service</h2>
-                            </td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!--Name section-->
-                        <tr>
-                            <td><span class="requiredInput">*</span>Your Name:</td>
-                        </tr>
-                        <tr>
-                            <td><input type="text" placeholder="What is your name?" id="bookingName" name="bookingName"
-                                    required></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p class="bookingFormError" id="bookingNameOutput"></p>
-                            </td>
-                        </tr>
-                        <!--Phone section-->
-                        <tr>
-                            <td>Phone Number:</td>
-                        </tr>
-                        <tr>
-                            <td><input type="tel" placeholder="What is your phone number?" id="bookingPhone"
-                                    name="bookingPhone"></td>
-                        </tr>
-                        <!--Email section-->
-                        <tr>
-                            <td>Email Address:</td>
-                        </tr>
-                        <tr>
-                            <td><input type="email" placeholder="What is your email address?" id="bookingEmail"
-                                    name="bookingEmail">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p class="bookingFormError" id="bookingContactOutput"></p>
-                            </td>
-                        </tr>
-                        <!--Services Required section-->
-                        <tr>
-                            <td><span class="requiredInput">*</span>Service(s) Required?</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <!--Need to look at better ways of selecting multiple-->
-                                <select name="servicesRequired" id="servicesRequired" multiple>
-                                    <option disabled selected>What service(s) do you want to book?</option>
-                                    <option value="carValet">Car Valet (&euro;20)</option>
-                                    <option value="clutchReplacement">Clutch Replacement (&euro;300)</option>
-                                    <option value="fullService">Full Service (&euro;100)</option>
-                                    <option value="preNctCheck">Pre-NCT Check (Free)</option>
-                                    <option value="tyreFitting">Tyre Fitting (&euro;10)</option>
-                                    <option value="wheelAlignment">Wheel Alignment(&euro;20)</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p class="bookingFormError" id="bookingServiceOutput"></p>
-                            </td>
-                        </tr>
-                        <!--Preferred Date section-->
-                        <tr>
-                            <td><span class="requiredInput">*</span>Preferred Date?</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <input type="date" name="bookingDate" id="bookingDate" required>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p id="dateError" class="bookingFormError"></p>
-                            </td>
-                        </tr>
-                        <!--Preferred Time section-->
-                        <tr>
-                            <td>Preferred Time?[HH:MM]</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <input type="time" name="bookingTime" id="bookingTime">
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <p id="timeError"></p>
-                            </td>
-                        </tr>
-                        <!--Require car pick up/collection section-->
-                        <tr>
-                            <td>Do you require your car to be collected/dropped off?
-                                <span><input type="checkbox" id="carCollection" name="carCollection"></span>
-                            </td>
-                        </tr>
-                        <!--Collection/Drop off areas hidden unless checkbox is clicked-->
-                        <tr class="hiddenCollectionArea">
-                            <td>Collection Point:</td>
-                        </tr>
-                        <tr class="hiddenCollectionArea">
-                            <td>
-                                <input type="text" placeholder="Collection Point">
-                            </td>
-                        </tr>
-                        <tr class="hiddenCollectionArea">
-                            <td>Drop Off Point:</td>
-                        </tr>
-                        <tr class="hiddenCollectionArea">
-                            <td>
-                                <input type="text" placeholder="Dropoff Point">
-                            </td>
-                        </tr>
-                        <!--Car Registration section-->
-                        <tr>
-                            <td>Do you know your car registration?</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <label for="regKnown">Yes</label>
-                                <input type="radio" id="regKnown" name="carReg" value="Yes">
-                                <label for="regUnknown">No</label>
-                                <input type="radio" id="regUnknown" name="carReg" value="No">
-                            </td>
-                        </tr>
-                        <!--If reg is known show this div-->
-                        <tr class="hiddenRegKnownArea">
-                            <td>Your Registration?</td>
-                        </tr>
-                        <tr class="hiddenRegKnownArea">
-                            <td><input type="text" name="carReg" id="carReg"></td>
-                        </tr>
-                        <!--If reg is unknown show this div-->
-                        <tr class="hiddenRegUnKnownArea">
-                            <td>Your car make?</td>
-                        </tr>
-                        <tr class="hiddenRegUnKnownArea">
-                            <td><input type="text" name="carMake" id="carMake"></td>
-                        </tr>
-                        <tr class="hiddenRegUnKnownArea">
-                            <td>Your car model?</td>
-                        </tr>
-                        <tr class="hiddenRegUnKnownArea">
-                            <td><input type="text" name="carModel" id="carModel"></td>
-                        </tr>
-                        <tr>
-                            <td>Any more details?</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <textarea name="extraBookingDetails" id="extraBookingDetails"></textarea>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <td>
-                                <p id="showBookingDetails"></p>
-                            </td>
-                            <!--Form button row for checkDetails Section-->
-                        <tr>
-                            <td class="textCenter">
-                                <button id="checkDetailsBtn">Check your Details</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td id="submitDetailsBtn" class="textCenter">
-                                <input type="submit" value="Submit">
-                            </td>
-                        </tr>
-                    </tfoot>
-                </table>
-            </form>
-        </div>
+        <div class="formBg">
+            <div class="formContainer">
+                <form class="col-sm-12 bookingForm" action="mailto:bookings@properAuto.ie" method="post">
+                    <!--Body of form(Input Areas)-->
+                    <table class="bookingFormTable">
+                        <thead>
+                            <tr>
+                                <td>
+                                    <h2 class="textCenter">Book a Car Service</h2>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!--Name section-->
+                            <tr>
+                                <td><span class="requiredInput">*</span>Your Name:</td>
+                            </tr>
+                            <tr>
+                                <td><input type="text" placeholder="What is your name?" id="bookingName"
+                                        name="bookingName" required></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p class="bookingFormError" id="bookingNameOutput"></p>
+                                </td>
+                            </tr>
+                            <!--Phone section-->
+                            <tr>
+                                <td>Phone Number:</td>
+                            </tr>
+                            <tr>
+                                <td><input type="tel" placeholder="What is your phone number?" id="bookingPhone"
+                                        name="bookingPhone"></td>
+                            </tr>
+                            <!--Email section-->
+                            <tr>
+                                <td>Email Address:</td>
+                            </tr>
+                            <tr>
+                                <td><input type="email" placeholder="What is your email address?" id="bookingEmail"
+                                        name="bookingEmail">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p class="bookingFormError" id="bookingContactOutput"></p>
+                                </td>
+                            </tr>
+                            <!--Services Required section-->
+                            <tr>
+                                <td><span class="requiredInput">*</span>Service(s) Required?</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <!--Need to look at better ways of selecting multiple-->
+                                    <select name="servicesRequired" id="servicesRequired" multiple>
+                                        <option disabled selected>What service(s) do you want to book?</option>
+                                        <option value="carValet">Car Valet (&euro;20)</option>
+                                        <option value="clutchReplacement">Clutch Replacement (&euro;300)</option>
+                                        <option value="fullService">Full Service (&euro;100)</option>
+                                        <option value="preNctCheck">Pre-NCT Check (Free)</option>
+                                        <option value="tyreFitting">Tyre Fitting (&euro;10)</option>
+                                        <option value="wheelAlignment">Wheel Alignment(&euro;20)</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p class="bookingFormError" id="bookingServiceOutput"></p>
+                                </td>
+                            </tr>
+                            <!--Preferred Date section-->
+                            <tr>
+                                <td><span class="requiredInput">*</span>Preferred Date?</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="date" name="bookingDate" id="bookingDate" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p id="dateError" class="bookingFormError"></p>
+                                </td>
+                            </tr>
+                            <!--Preferred Time section-->
+                            <tr>
+                                <td>Preferred Time?[HH:MM]</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="time" name="bookingTime" id="bookingTime">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p id="timeError"></p>
+                                </td>
+                            </tr>
+                            <!--Require car pick up/collection section-->
+                            <tr>
+                                <td>Do you require your car to be collected/dropped off?
+                                    <span><input type="checkbox" id="carCollection" name="carCollection"></span>
+                                </td>
+                            </tr>
+                            <!--Collection/Drop off areas hidden unless checkbox is clicked-->
+                            <tr class="hiddenCollectionArea">
+                                <td>Collection Point:</td>
+                            </tr>
+                            <tr class="hiddenCollectionArea">
+                                <td>
+                                    <input type="text" placeholder="Collection Point">
+                                </td>
+                            </tr>
+                            <tr class="hiddenCollectionArea">
+                                <td>Drop Off Point:</td>
+                            </tr>
+                            <tr class="hiddenCollectionArea">
+                                <td>
+                                    <input type="text" placeholder="Dropoff Point">
+                                </td>
+                            </tr>
+                            <!--Car Registration section-->
+                            <tr>
+                                <td>Do you know your car registration?</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="regKnown">Yes</label>
+                                    <input type="radio" id="regKnown" name="carReg" value="Yes">
+                                    <label for="regUnknown">No</label>
+                                    <input type="radio" id="regUnknown" name="carReg" value="No">
+                                </td>
+                            </tr>
+                            <!--If reg is known show this div-->
+                            <tr class="hiddenRegKnownArea">
+                                <td>Your Registration?</td>
+                            </tr>
+                            <tr class="hiddenRegKnownArea">
+                                <td><input type="text" name="carReg" id="carReg"></td>
+                            </tr>
+                            <!--If reg is unknown show this div-->
+                            <tr class="hiddenRegUnKnownArea">
+                                <td>Your car make?</td>
+                            </tr>
+                            <tr class="hiddenRegUnKnownArea">
+                                <td><input type="text" name="carMake" id="carMake"></td>
+                            </tr>
+                            <tr class="hiddenRegUnKnownArea">
+                                <td>Your car model?</td>
+                            </tr>
+                            <tr class="hiddenRegUnKnownArea">
+                                <td><input type="text" name="carModel" id="carModel"></td>
+                            </tr>
+                            <tr>
+                                <td>Any more details?</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <textarea name="extraBookingDetails" id="extraBookingDetails"></textarea>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td>
+                                    <p id="showBookingDetails"></p>
+                                </td>
+                                <!--Form button row for checkDetails Section-->
+                            <tr>
+                                <td class="textCenter">
+                                    <button id="checkDetailsBtn">Check your Details</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td id="submitDetailsBtn" class="textCenter">
+                                    <input type="submit" value="Submit">
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </form>
+            </div>
+            <footer class="page-footer">
+                <p>&copy;ProperAuto-2020</p>
+            </footer>
+            </div>
     </main>
-    <footer class="page-footer">
-        <p>&copy;ProperAuto-2020</p>
-    </footer>
+
     <script src="static/js/app.js"></script>
 </body>
 

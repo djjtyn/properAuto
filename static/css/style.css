@@ -1,7 +1,8 @@
 /*GENERAL STYLING*/
 *{
     box-sizing: border-box;
-}/*box-sizing set as brder-box*/
+    font-family: Verdana, "Arial", "Tahoma", "sans-serif";
+}/*box-sizing set as border-box, primary font for everything is verdana*/
 
 html, body{
     height: 100%;
@@ -11,6 +12,10 @@ html, body{
 
 .indexEmail{
     min-width: 25%;
+}
+
+.formBg{
+    background-color:#F5F5F5 ;
 }
 
 .bannerImg{
@@ -30,7 +35,7 @@ html, body{
     text-align: center;
     margin: 1em;
     padding: 1em;
-}
+}/*sets font-size, text align,margin and paddings for the paragraphs below the page banner images*/
 
 .textCenter{
     text-align: center;
@@ -307,12 +312,13 @@ footer p {
 }/*submit button on contact form changes bg color when hovered*/
   
 /* Background colour and padding around the form */
-.contactUsFormContainer {
+.formContainer {
     border-radius: 5px;
+    background-color: #f2f2f2;
     padding: 80px;
     padding-right: 20%;
     padding-left: 20%;
-}/**/
+  }
 
 .box {
     width: 100%;
