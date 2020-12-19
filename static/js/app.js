@@ -30,7 +30,7 @@ $(document).ready(function () {
     })
     //service choice to listen for change in selection on book appointment form and add the service cost to the total cost variable
     $("#servicesRequired").change(function () {
-        totalCost = 0;
+        var totalCost = 0;
         var servicesSelected = $("#servicesRequired").val();
         //if no services are selected display an error message
         if(servicesSelected === ""){
@@ -150,9 +150,6 @@ function inquiryCheck(){
     }
 }
 
-function bookingFormSubmit(){
-    window.open("bookingFormSubmit.html");
-}
 
 
 

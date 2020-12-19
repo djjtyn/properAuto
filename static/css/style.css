@@ -64,6 +64,15 @@ html, body{
     font-size: 1.1em;
 }/*Increases the font size of whatever navbar heading is hovered over*/
 
+.logo{
+    height: 4em;
+    width: 8em;
+}
+
+.formSubmitPageWrap{
+    height: 94vh;
+}/*This allows the footer to be shown at the bottom of the page on the contact form submit confirmation page*/
+
 
 /*FORMS*/
 /* Style form inputs */
