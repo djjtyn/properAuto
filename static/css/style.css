@@ -25,7 +25,7 @@ html, body{
 }/*sets the height and width of the banner images for the services and home page*/
 
 .headerHeading{
-    padding:1em 1em 0em 1em;
+    padding:2em 1em 0em 1em;
     text-align: center;
     font-size: 4em;
 }/*sets padding, center text alignment and font size for eading under banner images*/
@@ -84,6 +84,10 @@ input[type=text], select, textarea, input[type=email] {
     margin-top: 6px; 
     margin-bottom: 16px; 
     resize: vertical /* User to vertically resize the textarea */
+  }
+
+  #servicesRequired{
+      width: 100%;
   }
 
 /*INDEX PAGE*/
