@@ -1,8 +1,9 @@
 //Initialise and declare global variables
-var totalCost = 0;
+
 
 //jQUERY
 $(document).ready(function () {
+    var totalCost;
     $("#checkDetailsBtn").click(function () {
         //call javaScript functions
         validateBookingName();
@@ -13,6 +14,13 @@ $(document).ready(function () {
         var userName = $("#bookingName").val();
         var phoneNumber = $("#bookingPhone").val();
         var email = $("#bookingEmail").val();
+        if(!phoneNumber){
+            var contactDetail = email;
+        }else if(!email){
+            contactDetail = phoneNumber;
+        }else {
+            contactDetail = email + " or " + phoneNumber;
+        }
         var servicesSelected = $("#servicesRequired").val();
         var dateSelected = $("#bookingDate").val().toLocaleString();
         var selectedDate = new Date(dateSelected).toLocaleDateString();
@@ -21,8 +29,8 @@ $(document).ready(function () {
             $("#showBookingDetails").html("Hello " + userName + ". You have not fully completed the booking form.");
         }else{
             $("#showBookingDetails").addClass("bookingFormError");
-            $("#showBookingDetails").html("Hello " + userName + ". You want to book for " + selectedDate + "<br>We can contact you at " + phoneNumber
-                + " and " + email + ". Your selected service is: <br>" + servicesSelected + "<br>Which brings your cost to &euro;" + totalCost);
+            $("#showBookingDetails").html("Hello " + userName + ". You want to book for " + selectedDate + "<br>We can contact you at " + 
+            contactDetail + ". Your selected service is: <br>" + servicesSelected + "<br>Which brings your cost to &euro;" + totalCost);
             $("#submitDetailsBtn").show();
         }
         //this stops the check details button from submitting the form as that should only be done by the submit button
@@ -30,7 +38,7 @@ $(document).ready(function () {
     })
     //service choice to listen for change in selection on book appointment form and add the service cost to the total cost variable
     $("#servicesRequired").change(function () {
-        var totalCost = 0;
+        totalCost = 0;
         var servicesSelected = $("#servicesRequired").val();
         //if no services are selected display an error message
         if(servicesSelected === ""){
