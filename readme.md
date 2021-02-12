@@ -1,0 +1,4 @@
+# About Project
+## Proper Auto
+This is a group project I did for a National College of Ireland (NCI) module. The module that we had to do this for was 'Web Design and Client Side Scripting' and the brief we received was that we were "required to develop a website for a business. The business can be of your choice". 
+Our group consisted of two members- myself and a fellow student. I did all the HTML, CSS and JavaScript for the 'Home', 'Services' and 'Book' pages. I also did some SEO optimisation for the site using Structured Data in the head of each page and tested the website using various validation tools found online. 
