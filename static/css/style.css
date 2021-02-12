@@ -25,7 +25,7 @@ html, body{
 }/*sets the height and width of the banner images for the services and home page*/
 
 .headerHeading{
-    padding:1.8em 1em 0em 1em;
+    padding:2em 1em 0em 1em;
     text-align: center;
     font-size: 4em;
 }/*sets padding, center text alignment and font size for eading under banner images*/
@@ -331,17 +331,12 @@ footer p {
   }
 
 .box {
+    max-height: 85vh;
     width: 100%;
-    height: 450px;
+    position: relative;
     background-size: cover;
-    opacity: 0.7;
     position: relative;
 }
-
-/* When moving the mouse over the background image, it is no longer transparent */
-.box:hover{
-    opacity:1;
-  }
 
 .imagetext{
     color: white;
@@ -358,7 +353,3 @@ footer p {
     text-align: center;
   }/* Style submission confirmation text */
 
-/*FAQ*/
-.faqimg:hover{
-    opacity:1;
-}/* When mouse hovers over mechanc image, opacity is 1.*/
